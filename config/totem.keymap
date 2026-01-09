@@ -52,7 +52,12 @@
 
         left_curly_chord {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <13 14>;
+            key-positions = <14 13>;
+        };
+
+        left_square_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <3 4>;
         };
     };
 
