@@ -47,7 +47,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        left_curly_chord {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <13 14>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
