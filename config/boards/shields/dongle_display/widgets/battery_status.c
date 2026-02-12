@@ -52,20 +52,15 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     lv_canvas_set_px(canvas, 4, 0, lv_color_white(), LV_OPA_MAX);
 
     if (level <= 10 || usb_present) {
-        lv_area_t area = { .x1 = 1, .y1 = 2, .x2 = 1 + 3 - 1, .y2 = 2 + 5 - 1 };
-        lv_canvas_draw_rect(canvas, &area, &rect_fill_dsc);
+        lv_draw_rect(canvas, 1, 2, 3, 5, &rect_fill_dsc);
     } else if (level <= 30) {
-        lv_area_t area = { .x1 = 1, .y1 = 2, .x2 = 1 + 3 - 1, .y2 = 2 + 4 - 1 };
-        lv_canvas_draw_rect(canvas, &area, &rect_fill_dsc);
+        lv_draw_rect(canvas, 1, 2, 3, 4, &rect_fill_dsc);
     } else if (level <= 50) {
-        lv_area_t area = { .x1 = 1, .y1 = 2, .x2 = 1 + 3 - 1, .y2 = 2 + 3 - 1 };
-        lv_canvas_draw_rect(canvas, &area, &rect_fill_dsc);
+        lv_draw_rect(canvas, 1, 2, 3, 3, &rect_fill_dsc);
     } else if (level <= 70) {
-        lv_area_t area = { .x1 = 1, .y1 = 2, .x2 = 1 + 3 - 1, .y2 = 2 + 2 - 1 };
-        lv_canvas_draw_rect(canvas, &area, &rect_fill_dsc);
+        lv_draw_rect(canvas, 1, 2, 3, 2, &rect_fill_dsc);
     } else if (level <= 90) {
-        lv_area_t area = { .x1 = 1, .y1 = 2, .x2 = 1 + 3 - 1, .y2 = 2 + 1 - 1 };
-        lv_canvas_draw_rect(canvas, &area, &rect_fill_dsc);
+        lv_draw_rect(canvas, 1, 2, 3, 1, &rect_fill_dsc);
     }
 }
 
