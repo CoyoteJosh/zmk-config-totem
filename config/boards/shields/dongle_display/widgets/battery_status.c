@@ -60,16 +60,21 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     dsc.border_width = 1;
     dsc.outline_opa = LV_OPA_TRANSP;
 
+    lv_area_t coords = {1, 2, 3, 5};
     if (level <= 10 || usb_present) {
-        lv_draw_rect(&layer, &dsc, {1,2,3,5});
+        lv_draw_rect(&layer, &dsc, coords);
     } else if (level <= 30) {
-        lv_draw_rect(&layer, &dsc, {1,2,3,4});
+        coords.y2 = 4;
+        lv_draw_rect(&layer, &dsc, coords);
     } else if (level <= 50) {
-        lv_draw_rect(&layer, &dsc, {1,2,3,3});
+        coords.y2 = 3;
+        lv_draw_rect(&layer, &dsc, coords);
     } else if (level <= 70) {
-        lv_draw_rect(&layer, &dsc, {1,2,3,2});
+        coords.y2 = 2;
+        lv_draw_rect(&layer, &dsc, coords);
     } else if (level <= 90) {
-        lv_draw_rect(&layer, &dsc, {1,2,3,1});
+        coords.y2 = 1;
+        lv_draw_rect(&layer, &dsc, coords);
     }
 }
 
