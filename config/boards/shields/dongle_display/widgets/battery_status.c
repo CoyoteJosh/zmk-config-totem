@@ -62,20 +62,22 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
 
     lv_area_t coords = {1, 2, 3, 5};
     if (level <= 10 || usb_present) {
-        lv_draw_rect(&layer, &dsc, coords);
+        lv_draw_rect(&layer, &dsc, &coords);
     } else if (level <= 30) {
         coords.y2 = 4;
-        lv_draw_rect(&layer, &dsc, coords);
+        lv_draw_rect(&layer, &dsc, &coords);
     } else if (level <= 50) {
         coords.y2 = 3;
-        lv_draw_rect(&layer, &dsc, coords);
+        lv_draw_rect(&layer, &dsc, &coords);
     } else if (level <= 70) {
         coords.y2 = 2;
-        lv_draw_rect(&layer, &dsc, coords);
+        lv_draw_rect(&layer, &dsc, &coords);
     } else if (level <= 90) {
         coords.y2 = 1;
-        lv_draw_rect(&layer, &dsc, coords);
+        lv_draw_rect(&layer, &dsc, &coords);
     }
+
+    lv_canvas_finish_layer(canvas, &layer);
 }
 
 static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
