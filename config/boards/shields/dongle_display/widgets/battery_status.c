@@ -51,16 +51,27 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     lv_canvas_set_px(canvas, 0, 0, lv_color_white(), LV_OPA_MAX);
     lv_canvas_set_px(canvas, 4, 0, lv_color_white(), LV_OPA_MAX);
 
+    lv_layer_t layer;
+    lv_canvas_init_layer(canvas, &layer);
+
+    lv_draw_rect_dsc_t dsc;
+    lv_draw_rect_dsc_init(&dsc);
+    dsc.border_color = lv_color_white();
+    dsc.border_width = 1;
+    dsc.outline_opa = LV_OPA_TRANSP;
+
+    lv_draw_rect(&layer, &dsc, &coords);
+
     if (level <= 10 || usb_present) {
-        lv_canvas_draw_rect(canvas, 1, 2, 3, 5, &rect_fill_dsc);
+        lv_draw_rect(&layer, &dsc, {1,2,3,5});
     } else if (level <= 30) {
-        lv_canvas_draw_rect(canvas, 1, 2, 3, 4, &rect_fill_dsc);
+        lv_draw_rect(&layer, &dsc, {1,2,3,4});
     } else if (level <= 50) {
-        lv_canvas_draw_rect(canvas, 1, 2, 3, 3, &rect_fill_dsc);
+        lv_draw_rect(&layer, &dsc, {1,2,3,3});
     } else if (level <= 70) {
-        lv_canvas_draw_rect(canvas, 1, 2, 3, 2, &rect_fill_dsc);
+        lv_draw_rect(&layer, &dsc, {1,2,3,2});
     } else if (level <= 90) {
-        lv_canvas_draw_rect(canvas, 1, 2, 3, 1, &rect_fill_dsc);
+        lv_draw_rect(&layer, &dsc, {1,2,3,1});
     }
 }
 
