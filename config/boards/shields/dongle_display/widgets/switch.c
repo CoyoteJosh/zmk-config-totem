@@ -17,22 +17,22 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "switch.h"
 
-#define SRC(array) (const void **)array, sizeof(array) / sizeof(lv_img_dsc_t *)
+#define SRC(array) (const void **)array, sizeof(array) / sizeof(lv_image_dsc_t *)
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 
-LV_IMG_DECLARE(SW1);
-LV_IMG_DECLARE(SW2);
-LV_IMG_DECLARE(SW3);
-LV_IMG_DECLARE(SW4);
-LV_IMG_DECLARE(SW5);
-LV_IMG_DECLARE(SW6);
+LV_IMAGE_DECLARE(SW1);
+LV_IMAGE_DECLARE(SW2);
+LV_IMAGE_DECLARE(SW3);
+LV_IMAGE_DECLARE(SW4);
+LV_IMAGE_DECLARE(SW5);
+LV_IMAGE_DECLARE(SW6);
 
 
 
 #define ANIMATION_SPEED_IDLE 1800
-const lv_img_dsc_t *idle_imgs[] = {
+const lv_image_dsc_t *idle_imgs[] = {
     &SW1,
     &SW1,
     &SW1,
@@ -47,7 +47,7 @@ const lv_img_dsc_t *idle_imgs[] = {
 };
 
 #define ANIMATION_SPEED_SLOW 900
-const lv_img_dsc_t *slow_imgs[] = {
+const lv_image_dsc_t *slow_imgs[] = {
     &SW1,
 	&SW2,
 	&SW3,
@@ -57,7 +57,7 @@ const lv_img_dsc_t *slow_imgs[] = {
 };
 
 #define ANIMATION_SPEED_MID 600
-const lv_img_dsc_t *mid_imgs[] = {
+const lv_image_dsc_t *mid_imgs[] = {
     &SW1,
 	&SW2,
 	&SW3,
@@ -67,7 +67,7 @@ const lv_img_dsc_t *mid_imgs[] = {
 };
 
 #define ANIMATION_SPEED_FAST 300
-const lv_img_dsc_t *fast_imgs[] = {
+const lv_image_dsc_t *fast_imgs[] = {
     &SW1,
 	&SW2,
 	&SW3,

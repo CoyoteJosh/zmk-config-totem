@@ -55,13 +55,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SW1 uint8
 
 
 
-const lv_img_dsc_t SW1 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+const lv_image_dsc_t SW1 = {
+  .header.cf = LV_COLOR_FORMAT_I1,
   .header.w = 128,
   .header.h = 32,
-  .data_size = 512,
+  .header.stride = 16,
+  .data_size = 520,
   .data = SW1_map,
 };
 
@@ -107,13 +106,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SW2 uint8
   0xff, 0xff, 0x1f, 0xff, 0xff, 0xff, 0xe3, 0xff, 0xff, 0xff, 0xef, 0xff, 0xff, 0xff, 0xff, 0xff, 
 };
 
-const lv_img_dsc_t SW2 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+const lv_image_dsc_t SW2 = {
+  .header.cf = LV_COLOR_FORMAT_I1,
   .header.w = 128,
   .header.h = 32,
-  .data_size = 512,
+  .header.stride = 16,
+  .data_size = 520,
   .data = SW2_map,
 };
 
@@ -160,13 +158,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SW3 uint8
   0xff, 0xff, 0x1f, 0xff, 0xff, 0xff, 0xe3, 0xff, 0xff, 0xff, 0xef, 0xff, 0xff, 0xff, 0xff, 0xff, 
 };
 
-const lv_img_dsc_t SW3 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+const lv_image_dsc_t SW3 = {
+  .header.cf = LV_COLOR_FORMAT_I1,
   .header.w = 128,
   .header.h = 32,
-  .data_size = 512,
+  .header.stride = 16,
+  .data_size = 520,
   .data = SW3_map,
 };
 
@@ -213,13 +210,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SW4 uint8
   0xff, 0xff, 0x1f, 0xff, 0xff, 0xff, 0xe3, 0xff, 0xff, 0xff, 0xef, 0xff, 0xff, 0xff, 0xff, 0xff, 
 };
 
-const lv_img_dsc_t SW4 = {
-  .header.cf = LV_COLOR_FORMAT_ARGB8888,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+const lv_image_dsc_t SW4 = {
+  .header.cf = LV_COLOR_FORMAT_I1,
   .header.w = 128,
   .header.h = 32,
-  .data_size = 512,
+  .header.stride = 16,
+  .data_size = 520,
   .data = SW4_map,
 };
 
@@ -266,13 +262,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SW5 uint8
   0xff, 0xff, 0x1f, 0xff, 0xff, 0xff, 0xe3, 0xff, 0xff, 0xff, 0xef, 0xff, 0xff, 0xff, 0xff, 0xff, 
 };
 
-const lv_img_dsc_t SW5 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+const lv_image_dsc_t SW5 = {
+  .header.cf = LV_COLOR_FORMAT_I1,
   .header.w = 128,
   .header.h = 32,
-  .data_size = 512,
+  .header.stride = 16,
+  .data_size = 520,
   .data = SW5_map,
 };
 
@@ -319,12 +314,11 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SW6 uint8
   0xff, 0xff, 0x1f, 0xff, 0xff, 0xff, 0xe3, 0xff, 0xff, 0xff, 0xef, 0xff, 0xff, 0xff, 0xff, 0xff, 
 };
 
-const lv_img_dsc_t SW6 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+const lv_image_dsc_t SW6 = {
+  .header.cf = LV_COLOR_FORMAT_I1,
   .header.w = 128,
   .header.h = 32,
-  .data_size = 512,
+  .header.stride = 16,
+  .data_size = 520,
   .data = SW6_map,
 };
