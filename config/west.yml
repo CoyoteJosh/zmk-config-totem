@@ -11,9 +11,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+      revision: v0.3-branch
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3-branch
     - name: zmk-dongle-display
       remote: englmaxi
       revision: v0.3
