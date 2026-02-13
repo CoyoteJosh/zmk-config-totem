@@ -1,18 +1,18 @@
 include:
   # - board: seeeduino_xiao_ble
-  #   shield: totem_left rgbled_adapter
+  #   shield: totem_left
   #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   #   artifact-name: carbon_fiber_totem_left
   # - board: seeeduino_xiao_ble
-  #   shield: totem_right rgbled_adapter
+  #   shield: totem_right
   #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   #   artifact-name: carbon_fiber_totem_right
   # - board: seeeduino_xiao_ble
-  #   shield: totem_left rgbled_adapter
+  #   shield: totem_left
   #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   #   artifact-name: barney_totem_left
   # - board: seeeduino_xiao_ble
-  #   shield: totem_right rgbled_adapter
+  #   shield: totem_right
   #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   #   artifact-name: barney_totem_right
   # - board: seeeduino_xiao_ble

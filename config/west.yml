@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
@@ -12,8 +10,6 @@ manifest:
       revision: main
       import: app/west.yml
       revision: v0.3-branch
-    - name: zmk-rgbled-widget
-      remote: caksoylar
     - name: zmk-dongle-display
       remote: englmaxi
       revision: v0.3
