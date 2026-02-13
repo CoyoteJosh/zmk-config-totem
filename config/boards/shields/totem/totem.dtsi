@@ -9,7 +9,7 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &default_kscan;
         zmk,physical-layout = &default_layout;
     };
 
@@ -77,7 +77,7 @@
             ;
     };
  
-    kscan0: kscan_0 {
+    default_kscan: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         
